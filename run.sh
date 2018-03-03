@@ -1,2 +1,1 @@
-#!bin/bash
-ruby lib/gkill-bot.rb
+bundle exec ruby lib/gkill-bot.rb

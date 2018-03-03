@@ -24,3 +24,5 @@ module Gkill
 
   end
 end
+
+Gkill::Bot.run
