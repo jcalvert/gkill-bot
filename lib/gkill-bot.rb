@@ -28,6 +28,7 @@ module Gkill
       end
 
       bot.run
+      command_bot.run
     end
 
   end
