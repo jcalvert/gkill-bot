@@ -7,6 +7,14 @@ module Gkill
     def self.run
       conf = YAML::load_file('config.yml')
       bot = Discordrb::Bot.new token: conf['token'], client_id: conf['client_id']
+
+      command_bot = Discordrb::Commands::CommandBot.new token: conf['token'], client_id: conf['client_id'],  prefix: '!'
+
+
+      command_bot.command :bold do |_event, *args|
+        "**#{args.join(' ')}**"
+      end
+
       bot.message(content: 'Ping!') do |event|
         event.respond 'Pong!'
       end
